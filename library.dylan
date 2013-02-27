@@ -5,12 +5,12 @@ copyright: See LICENSE file in this distribution.
 warranty: Distributed WITHOUT WARRANTY OF ANY KIND
 
 
-define library inotify-dylan
+define library inotify
   use common-dylan;
   use io;
 end library;
 
-define module inotify-dylan
+define module inotify
   use common-dylan, exclude: { format-to-string };
   use format-out;
 end module;
