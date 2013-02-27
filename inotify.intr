@@ -7,5 +7,5 @@ warranty: Distributed WITHOUT WARRANTY OF ANY KIND
 
 define interface
   #include "sys/inotify.h",
-  import: all;
+    import: all;
 end interface;
