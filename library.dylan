@@ -7,10 +7,14 @@ warranty: Distributed WITHOUT WARRANTY OF ANY KIND
 
 define library inotify
   use common-dylan;
-  use io;
+  use c-ffi;
+
+  export inotify;
 end library;
 
 define module inotify
   use common-dylan, exclude: { format-to-string };
-  use format-out;
+  use c-ffi;
+
+  export inotify-init;
 end module;
