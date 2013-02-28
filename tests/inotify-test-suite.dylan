@@ -11,6 +11,6 @@ end suite inotify-test-suite;
 
 define test init-close-inotify-test ()
   let fd = inotify-init();
-  check("inotify-init success", fd > 0);
+  check("inotify-init success", method () fd > 0 end);
   // TODO: Close file descriptor
 end test init-close-inotify-test;
