@@ -5,12 +5,12 @@ copyright: See LICENSE file in this distribution.
 warranty: Distributed WITHOUT WARRANTY OF ANY KIND
 
 
-define library inotify-test-suite-app-library
+define library inotify-test-suite-app
   use testworks;
   use inotify-test-suite;
-end library inotify-test-suite-app-library;
+end library inotify-test-suite-app;
 
-define module inotify-dylan
+define module inotify-test-suite-app
   use testworks;
   use inotify-test-suite;
-end module inotify-dylan;
+end module inotify-test-suite-app;
