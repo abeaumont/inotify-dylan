@@ -9,8 +9,8 @@ define suite inotify-test-suite ()
   test init-close-inotify-test;
 end suite inotify-test-suite;
 
-define test open-close-inotify-test ()
+define test init-close-inotify-test ()
   let fd = inotify-init();
   check("inotify-init success", fd > 0);
   // TODO: Close file descriptor
-end test open-close-inotify-test ();
+end test init-close-inotify-test;
