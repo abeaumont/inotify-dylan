@@ -13,35 +13,30 @@ end suite inotify-test-suite;
 define test init-close-inotify-test ()
   let fd = inotify-init();
   check("inotify-init() success", method () fd > 0 end);
-  // FIXME:
-  // check-equal("inotify-close(fd) success", inotify-close(fd), 0);
+  check-equal("inotify-close(fd) success", inotify-close(fd), 0);
 end test init-close-inotify-test;
 
 define test init1-close-inotify-test ()
   // Equivalent to inotify-init();
   let fd = inotify-init1(0);
   check("inotify-init1(0) success", method () fd > 0 end);
-  // FIXME:
-  // check-equal("inotify-close(fd) success", inotify-close(fd), 0);
+  check-equal("inotify-close(fd) success", inotify-close(fd), 0);
 
   // $IN-NONBLOCK option
   let fd = inotify-init1($IN-NONBLOCK);
   check("inotify-init1($IN-NONBLOCK) success", method () fd > 0 end);
-  // FIXME:
-  // check-equal("inotify-close(fd) success", inotify-close(fd), 0);
+  check-equal("inotify-close(fd) success", inotify-close(fd), 0);
 
   // $IN-CLOEXEC option
   let fd = inotify-init1($IN-CLOEXEC);
   check("inotify-init1($IN-CLOEXEC) success", method () fd > 0 end);
-  // FIXME:
-  // check-equal("inotify-close(fd) success", inotify-close(fd), 0);
+  check-equal("inotify-close(fd) success", inotify-close(fd), 0);
 
   // Both $IN-NONBLOCK and $IN-CLOEXEC option
   let fd = inotify-init1(logior($IN-NONBLOCK, $IN-CLOEXEC));
   check("inotify-init1(logior($IN-NONBLOCK, $IN-CLOEXEC)) success",
         method () fd > 0 end);
-  // FIXME:
-  // check-equal("inotify-close(fd) success", inotify-close(fd), 0);
+  check-equal("inotify-close(fd) success", inotify-close(fd), 0);
 
   // Invalid init option
   let fd = inotify-init1(logior($IN-NONBLOCK, $IN-CLOEXEC) + 1);
