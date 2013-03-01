@@ -16,5 +16,9 @@ define module inotify
   use common-dylan, exclude: { format-to-string };
   use c-ffi;
 
-  export inotify-init;
+  export inotify-init, inotify-init1;
+
+  export
+    $IN-CLOEXEC,
+    $IN-NONBLOCK;
 end module;

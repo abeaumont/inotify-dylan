@@ -7,5 +7,9 @@ warranty: Distributed WITHOUT WARRANTY OF ANY KIND
 
 define interface
   #include "sys/inotify.h",
-    import: all;
+    import: all,
+    import: {
+      "IN_CLOEXEC",
+      "IN_NONBLOCK"
+    };
 end interface;
