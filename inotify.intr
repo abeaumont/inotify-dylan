@@ -19,5 +19,6 @@ define interface
     import: {
       "IN_CLOEXEC",
       "IN_NONBLOCK"
-    };
+    },
+    equate: {"char *" => <c-string>};
 end interface;

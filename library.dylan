@@ -16,7 +16,12 @@ define module inotify
   use common-dylan, exclude: { format-to-string };
   use c-ffi;
 
-  export inotify-init, inotify-init1, inotify-close;
+  export
+    inotify-init,
+    inotify-init1,
+    inotify-add-watch,
+    inotify-rm-watch,
+    inotify-close;
 
   export
     $IN-CLOEXEC,
