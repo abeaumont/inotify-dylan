@@ -13,12 +13,34 @@ define c-function inotify-close
   c-name: "close";
 end c-function inotify-close;
 
+define c-variable errno :: <c-int>;
+end c-variable;
+
 define interface
-  #include "sys/inotify.h",
+  #include {
+    "errno.h",
+    "sys/inotify.h"
+    },
     import: all,
     import: {
       "IN_CLOEXEC",
       "IN_NONBLOCK"
+    },
+    import: {
+      "EACCES",
+      "EAGAIN",
+      "EBADF",
+      "EFAULT",
+      "EINTR",
+      "EINVAL",
+      "EIO",
+      "EISDIR",
+      "EMFILE",
+      "ENFILE",
+      "ENOENT",
+      "ENOMEM",
+      "ENOSPC",
+      "EWOULDBLOCK"
     },
     equate: {"char *" => <c-string>};
 end interface;

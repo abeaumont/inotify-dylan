@@ -26,4 +26,21 @@ define module inotify
   export
     $IN-CLOEXEC,
     $IN-NONBLOCK;
+
+  export
+    errno,
+    $EACCES,
+    $EAGAIN,
+    $EBADF,
+    $EFAULT,
+    $EINTR,
+    $EINVAL,
+    $EIO,
+    $EISDIR,
+    $EMFILE,
+    $ENFILE,
+    $ENOENT,
+    $ENOMEM,
+    $ENOSPC,
+    $EWOULDBLOCK
 end module;
