@@ -6,12 +6,12 @@ warranty: Distributed WITHOUT WARRANTY OF ANY KIND
 
 
 // Add read and close by hand, apparently including unistd.h doesn't work
-// TODO: Add read class
-define C-function inotify-close
-  parameter file-descriptor :: <C-int>;
-  result status :: <C-int>;
+// TODO: Add read function
+define c-function inotify-close
+  parameter file-descriptor :: <c-int>;
+  result status :: <c-int>;
   c-name: "close";
-end C-function inotify-close;
+end c-function inotify-close;
 
 define interface
   #include "sys/inotify.h",
