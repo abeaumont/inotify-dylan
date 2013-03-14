@@ -22,10 +22,14 @@ define interface
     "sys/inotify.h"
     },
     import: all,
+
+    // inotify-init1 flags
     import: {
       "IN_CLOEXEC",
       "IN_NONBLOCK"
     },
+
+    // possible errno values while operating with inotify
     import: {
       "EACCES",
       "EAGAIN",
