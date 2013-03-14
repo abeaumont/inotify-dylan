@@ -16,6 +16,7 @@ define module inotify
   use common-dylan, exclude: { format-to-string };
   use c-ffi;
 
+  // inotify API functions
   export
     inotify-init,
     inotify-init1,
@@ -23,10 +24,12 @@ define module inotify
     inotify-rm-watch,
     inotify-close;
 
+  // inotify-init1 flags
   export
     $IN-CLOEXEC,
     $IN-NONBLOCK;
 
+  // error variable and values
   export
     errno,
     $EACCES,
