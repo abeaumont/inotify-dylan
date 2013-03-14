@@ -13,8 +13,11 @@ define c-function inotify-close
   c-name: "close";
 end c-function inotify-close;
 
-define c-variable errno :: <c-int>;
+/*
+define c-variable inotify-errno :: <c-int>
+  c-name: "errno";
 end c-variable;
+*/
 
 define interface
   #include {

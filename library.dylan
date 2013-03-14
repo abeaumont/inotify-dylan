@@ -31,7 +31,7 @@ define module inotify
 
   // error variable and values
   export
-    errno,
+    //errno,
     $EACCES,
     $EAGAIN,
     $EBADF,
