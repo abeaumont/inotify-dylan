@@ -45,5 +45,5 @@ define module inotify
     $ENOENT,
     $ENOMEM,
     $ENOSPC,
-    $EWOULDBLOCK
+    $EWOULDBLOCK;
 end module;
