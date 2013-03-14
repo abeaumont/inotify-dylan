@@ -29,6 +29,39 @@ define module inotify
     $IN-CLOEXEC,
     $IN-NONBLOCK;
 
+  // inotify-add-watch and <inotify-event> mask field bits
+  export
+    $IN-ACCESS,
+    $IN-ATTRIB,
+    $IN-CLOSE-WRITE,
+    $IN-CLOSE-NOWRITE,
+    $IN-CREATE,
+    $IN-DELETE,
+    $IN-DELETE-SELF,
+    $IN-MODIFY,
+    $IN-MOVE-SELF,
+    $IN-MOVED-FROM,
+    $IN-MOVED-TO,
+    $IN-OPEN;
+
+  // additional inotify-add-watch mask field bits
+  export
+    $IN-ALL-EVENTS,
+    $IN-CLOSE,
+    $IN-DONT-FOLLOW, // since Linux 2.6.15
+    $IN-EXCL-UNLINK, // since Linux 2.6.36
+    $IN-MASK-ADD,
+    $IN-MOVE,
+    $IN-ONESHOT,
+    $IN-ONLYDIR;     // since Linux 2.6.15
+
+  // additional <inotify-event> mask field bits
+  export
+    $IN-IGNORED,
+    $IN-ISDIR,
+    $IN-Q-OVERFLOW,
+    $IN-UNMOUNT;
+
   // error variable and values
   export
     //errno,
