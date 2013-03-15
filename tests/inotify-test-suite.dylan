@@ -48,6 +48,14 @@ define test add-rm-watch-inotify-test ()
   let fd = inotify-init();
   check("inotify-init() succeeds", method () fd > 0 end);
 
+  // No valid file descriptor
+  check-equal("inotify-add-watch with invalid file descriptor fails",
+              inotify-add-watch(0, "/tmp", 0), -1);
+
+  // Non-existant file
+  check-equal("inotify-add-watch with non-existant file descriptor fails",
+              inotify-add-watch(fd, "/-_-_-_-", 0), -1);
+
   // No mask
   check-equal("inotify-add-watch() fails", inotify-add-watch(fd, "/tmp", 0), -1);
 
